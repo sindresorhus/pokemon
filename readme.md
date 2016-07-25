@@ -21,6 +21,12 @@ const pokemon = require('pokemon');
 
 pokemon.random();
 //=> 'Snorlax'
+
+pokemon.getName(147);
+//=> 'Dratini'
+
+pokemon.getId('Dratini');
+//=> 147
 ```
 
 
@@ -34,9 +40,17 @@ All names.
 
 ### .random()
 
-Type: `Function`
-
 Random name.
+
+### .getName(id: number)
+
+
+Get name from ID.
+
+### .getId(name: string)
+
+
+Get ID from name.
 
 
 ## Related

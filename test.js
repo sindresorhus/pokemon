@@ -7,4 +7,6 @@ test(t => {
 	t.not(m.random(), m.random());
 	t.is(m.all[0], 'Bulbasaur');
 	t.is(m.all[1], 'Ivysaur');
+	t.is(m.getName(143), 'Snorlax');
+	t.is(m.getId('Snorlax'), 143);
 });
