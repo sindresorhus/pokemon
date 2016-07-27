@@ -6,7 +6,7 @@ exports.all = pokemon;
 exports.random = uniqueRandomArray(pokemon);
 
 exports.getName = id => {
-	const name = pokemon[id - 1];
+	const name = pokemon[id];
 
 	if (!name) {
 		throw new Error('Invalid ID');
@@ -22,5 +22,5 @@ exports.getId = name => {
 		throw new Error('Invalid name');
 	}
 
-	return index + 1;
+	return index;
 };
