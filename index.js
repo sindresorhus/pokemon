@@ -9,7 +9,7 @@ exports.getName = id => {
 	const name = pokemon[id - 1];
 
 	if (!name) {
-		throw new Error('Invalid ID');
+		throw new Error(`Pokémon with ID ${id} does not exist`);
 	}
 
 	return name;
@@ -19,7 +19,7 @@ exports.getId = name => {
 	const index = pokemon.indexOf(name);
 
 	if (index === -1) {
-		throw new Error('Invalid name');
+		throw new Error(`Pokémon with name ${name} does not exist`);
 	}
 
 	return index + 1;
