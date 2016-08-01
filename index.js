@@ -14,8 +14,8 @@ function getLocalizedList(lang) {
 	try {
 		return require(`./pokemon_${lang}`);
 	} catch (err) {
-		throw new Error(`List for language code '${lang}' does not exist. ` +
-			`Please help to add more languages: https://github.com/${pkg.repository}`);
+		throw new Error(`Localized list for language code '${lang}' does not exist. ` +
+			`Pull request welcome: https://github.com/${pkg.repository}`);
 	}
 }
 
@@ -37,7 +37,7 @@ exports.getId = (name, lang) => {
 
 	if (index === -1) {
 		throw new Error(`Pokémon with name '${name}' does not exist for language code '${lang}'. ` +
-			`Please help to add more languages: https://github.com/${pkg.repository}`);
+			`Please report to https://github.com/${pkg.repository}/issues if we missed something.`);
 	}
 
 	return index + 1;
