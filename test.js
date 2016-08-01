@@ -1,6 +1,18 @@
 import test from 'ava';
 import m from './';
 
+function testNames(t, lang, expectedNames) {
+	t.is(m.getName(1, lang), expectedNames[0]);
+	t.is(m.getName(400, lang), expectedNames[1]);
+	t.is(m.getName(721, lang), expectedNames[2]);
+}
+
+function testIDs(t, lang, actualNames) {
+	t.is(m.getId(actualNames[0], lang), 1);
+	t.is(m.getId(actualNames[1], lang), 400);
+	t.is(m.getId(actualNames[2], lang), 721);
+}
+
 test(t => {
 	t.true(m.all.length > 0);
 	t.truthy(m.random());
@@ -11,42 +23,32 @@ test(t => {
 	t.is(m.getId('Snorlax'), 143);
 });
 
-test('English names', t => {
-	t.is(m.getName(1), 'Bulbasaur');
-	t.is(m.getName(100), 'Voltorb');
-	t.is(m.getName(200), 'Misdreavus');
-	t.is(m.getName(300), 'Skitty');
-	t.is(m.getName(400), 'Bibarel');
-	t.is(m.getName(500), 'Emboar');
-	t.is(m.getName(600), 'Klang');
-	t.is(m.getName(700), 'Sylveon');
-	t.is(m.getName(721), 'Volcanion');
-});
+test('Get English name by ID', testNames, 'en', [
+	'Bulbasaur',
+	'Bibarel',
+	'Volcanion'
+]);
 
-test('German names', t => {
-	t.is(m.getName(1, 'de'), 'Bisasam');
-	t.is(m.getName(100, 'de'), 'Voltobal');
-	t.is(m.getName(200, 'de'), 'Traunfugil');
-	t.is(m.getName(300, 'de'), 'Eneco');
-	t.is(m.getName(400, 'de'), 'Bidifas');
-	t.is(m.getName(500, 'de'), 'Flambirex');
-	t.is(m.getName(600, 'de'), 'Kliklak');
-	t.is(m.getName(700, 'de'), 'Feelinara');
-	t.is(m.getName(721, 'de'), 'Volcanion');
-});
+test('Get English name by ID (when no language code is given)', testNames, undefined, [
+	'Bulbasaur',
+	'Bibarel',
+	'Volcanion'
+]);
 
-test('Indices can be used with language codes', t => {
-	t.is(m.getId('Snorlax'), 143);
-	t.is(m.getId('Relaxo', 'de'), 143);
-});
+test('Get German name by ID', testNames, 'de', [
+	'Bisasam',
+	'Bidifas',
+	'Volcanion'
+]);
 
-test('Language fallback is English', t => {
-	const snorlaxId = 143;
-	const snorlaxEnglish = 'Snorlax';
+test('Get ID by English name', testIDs, 'en', [
+	'Bulbasaur',
+	'Bibarel',
+	'Volcanion'
+]);
 
-	t.is(m.getId(snorlaxEnglish), snorlaxId);
-	t.is(m.getId(snorlaxEnglish, 'en'), snorlaxId);
-
-	t.is(m.getName(snorlaxId), snorlaxEnglish);
-	t.is(m.getName(snorlaxId, 'en'), snorlaxEnglish);
-});
+test('Get ID by German name', testIDs, 'de', [
+	'Bisasam',
+	'Bidifas',
+	'Volcanion'
+]);
