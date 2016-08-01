@@ -1,5 +1,4 @@
 'use strict';
-const fs = require('fs');
 const uniqueRandomArray = require('unique-random-array');
 const pokemon = require('./pokemon');
 
@@ -12,8 +11,7 @@ function getLocalizedList(lang) {
 	}
 
 	try {
-		const list = fs.readFileSync(`./pokemon_${lang}.json`, 'utf8');
-		return JSON.parse(list);
+		return require(`./pokemon_${lang}`);
 	} catch (err) {
 		throw new Error(`Localized list for language code ${lang} does not exist`);
 	}
