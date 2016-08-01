@@ -42,16 +42,41 @@ All names.
 
 Random name.
 
-### .getName(id: number)
+### .getName(id: number, [lang: string])
 
 
 Get name from ID.
 
-### .getId(name: string)
+With the optional `lang` parameter you can get a localized name using a language code ([ISO 639-1 format](https://en.wikipedia.org/wiki/ISO_639-1)).
+
+**Examples**
+
+```js
+pokemon.getName(100); //=> 'Voltorb'
+pokemon.getName(100, 'de'); //=> 'Voltobal'
+```
+
+
+### .getId(name: string, [lang: string])
 
 
 Get ID from name.
 
+With the optional `lang` parameter you can get the ID for a localized name using a language code ([ISO 639-1 format](https://en.wikipedia.org/wiki/ISO_639-1)).
+
+**Examples**
+
+```js
+pokemon.getId('Snorlax'); //=> 143
+pokemon.getId('Relaxo', 'de'); //=> 143
+```
+
+## Supported Languages
+
+Pokémon names are available for the following languages:
+
+- `en` (English)
+- `de` (German)
 
 ## Related
 
