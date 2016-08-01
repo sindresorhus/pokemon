@@ -46,9 +46,7 @@ test('Language fallback is English', t => {
 
 	t.is(m.getId(snorlaxEnglish), snorlaxId);
 	t.is(m.getId(snorlaxEnglish, 'en'), snorlaxId);
-	t.is(m.getId(snorlaxEnglish, 'invalid'), snorlaxId);
 
 	t.is(m.getName(snorlaxId), snorlaxEnglish);
 	t.is(m.getName(snorlaxId, 'en'), snorlaxEnglish);
-	t.is(m.getName(snorlaxId, 'invalid'), snorlaxEnglish);
 });
