@@ -71,6 +71,13 @@ pokemon.getId('Snorlax'); //=> 143
 pokemon.getId('Relaxo', 'de'); //=> 143
 ```
 
+## Supported Languages
+
+Pokémon names are available for the following languages:
+
+- `en` (English)
+- `de` (German)
+
 ## Related
 
 - [pokemon-cli](https://github.com/sindresorhus/pokemon-cli) - CLI for this module
