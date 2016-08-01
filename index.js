@@ -1,5 +1,6 @@
 'use strict';
 const uniqueRandomArray = require('unique-random-array');
+const pkg = require('./package');
 const pokemon = require('./pokemon');
 
 exports.all = pokemon;
@@ -13,7 +14,8 @@ function getLocalizedList(lang) {
 	try {
 		return require(`./pokemon_${lang}`);
 	} catch (err) {
-		throw new Error(`Localized list for language code ${lang} does not exist`);
+		throw new Error(`List for language code "${lang}" does not exist. ` +
+			`Please help to add more languages: https://github.com/${pkg.repository}`);
 	}
 }
 
