@@ -73,8 +73,9 @@ pokemon.getId('Relaxo', 'de');
 
 Pokémon names are available for the following languages:
 
-- `en` (English)
 - `de` (German)
+- `en` (English)
+- `fr` (French)
 
 
 ## Related

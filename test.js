@@ -35,6 +35,12 @@ test('Get English name by ID (when no language code is given)', testNames, undef
 	'Volcanion'
 ]);
 
+test('Get French name by ID', testNames, 'fr', [
+	'Bulbizarre',
+	'Castorno',
+	'Volcanion'
+]);
+
 test('Get German name by ID', testNames, 'de', [
 	'Bisasam',
 	'Bidifas',
