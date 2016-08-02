@@ -42,7 +42,7 @@ All names.
 
 Random name.
 
-### .getName(id: *number*, [lang: *string*])
+### .getName(id: *number*, lang: *string* = 'en'): *string*
 
 Get name from ID.
 
@@ -55,7 +55,7 @@ pokemon.getName(100, 'de');
 //=> 'Voltobal'
 ```
 
-### .getId(name: *string*, [lang: *string*])
+### .getId(name: *string*, lang: *string* = 'en'): *number*
 
 Get ID from name.
 
