@@ -53,12 +53,6 @@ test('Get ID by English name', testIDs, 'en', [
 	'Volcanion'
 ]);
 
-test('Get ID by French name', testIDs, 'fr', [
-	'Bulbizarre',
-	'Castorno',
-	'Volcanion'
-]);
-
 test('Get ID by German name', testIDs, 'de', [
 	'Bisasam',
 	'Bidifas',
