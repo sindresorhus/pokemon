@@ -53,8 +53,6 @@ pokemon.getName(100);
 //=> 'Voltorb'
 pokemon.getName(100, 'de');
 //=> 'Voltobal'
-pokemon.getName(100, 'fr');
-//=> 'Voltorbe'
 ```
 
 ### .getId(name: *string*, [lang: *string*])
@@ -67,8 +65,6 @@ With the optional `lang` parameter you can get the ID for a localized name using
 pokemon.getId('Snorlax');
 //=> 143
 pokemon.getId('Relaxo', 'de');
-//=> 143
-pokemon.getId('Ronflex', 'fr');
 //=> 143
 ```
 
