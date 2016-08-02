@@ -53,6 +53,8 @@ pokemon.getName(100);
 //=> 'Voltorb'
 pokemon.getName(100, 'de');
 //=> 'Voltobal'
+pokemon.getName(100, 'fr');
+//=> 'Voltorbe'
 ```
 
 ### .getId(name: *string*, [lang: *string*])
@@ -66,6 +68,8 @@ pokemon.getId('Snorlax');
 //=> 143
 pokemon.getId('Relaxo', 'de');
 //=> 143
+pokemon.getId('Ronflex', 'fr');
+//=> 143
 ```
 
 
@@ -73,8 +77,9 @@ pokemon.getId('Relaxo', 'de');
 
 Pokémon names are available for the following languages:
 
-- `en` (English)
 - `de` (German)
+- `en` (English)
+- `fr` (French)
 
 
 ## Related
