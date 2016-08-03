@@ -53,6 +53,12 @@ test('Get Chinese name by ID', testNames, 'zh-CN', [
 	'ボルケニオン'
 ]);
 
+test('Get Japanese name by ID', testNames, 'jp', [
+	'フシギダネ',
+	'ビーダル',
+	'ボルケニオン'
+]);
+
 test('Get ID by English name', testIDs, 'en', [
 	'Bulbasaur',
 	'Bibarel',
@@ -68,5 +74,11 @@ test('Get ID by German name', testIDs, 'de', [
 test('Get ID by Chinese name', testIDs, 'zh-CN', [
 	'妙蛙种子',
 	'大尾狸',
+	'ボルケニオン'
+]);
+
+test('Get ID by Japanese name', testIDs, 'jp', [
+	'フシギダネ',
+	'ビーダル',
 	'ボルケニオン'
 ]);
