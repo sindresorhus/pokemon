@@ -47,6 +47,12 @@ test('Get German name by ID', testNames, 'de', [
 	'Volcanion'
 ]);
 
+test('Get Chinese name by ID', testNames, 'zh-CN', [
+	'妙蛙种子',
+	'大尾狸',
+	'ボルケニオン'
+]);
+
 test('Get ID by English name', testIDs, 'en', [
 	'Bulbasaur',
 	'Bibarel',
@@ -57,4 +63,10 @@ test('Get ID by German name', testIDs, 'de', [
 	'Bisasam',
 	'Bidifas',
 	'Volcanion'
+]);
+
+test('Get ID by Chinese name', testIDs, 'zh-CN', [
+	'妙蛙种子',
+	'大尾狸',
+	'ボルケニオン'
 ]);
