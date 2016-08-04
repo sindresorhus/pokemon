@@ -74,6 +74,7 @@ Pokémon names are available for the following languages:
 - `de` (German)
 - `en` (English)
 - `fr` (French)
+- `ja` (Japanese)
 
 
 ## Related

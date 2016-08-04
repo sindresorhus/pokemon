@@ -47,6 +47,12 @@ test('Get German name by ID', testNames, 'de', [
 	'Volcanion'
 ]);
 
+test('Get Japanese name by ID', testNames, 'ja', [
+	'フシギダネ',
+	'ビーダル',
+	'ボルケニオン'
+]);
+
 test('Get ID by English name', testIDs, 'en', [
 	'Bulbasaur',
 	'Bibarel',
