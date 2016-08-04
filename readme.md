@@ -32,13 +32,11 @@ pokemon.getId('Dratini');
 
 ## API
 
-### .all
-
-Type: `Array`
+### .all: *string[]*
 
 All names.
 
-### .random()
+### .random(): *string*
 
 Random name.
 
