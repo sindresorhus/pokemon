@@ -64,6 +64,12 @@ test('Get Japanese name by ID', testNames, 'ja', [
 	'ボルケニオン'
 ]);
 
+test('Get Russian name by ID', testNames, 'ru', [
+	'Бульбазавр',
+	'Бибарел',
+	'Вулканион'
+]);
+
 test('Get ID by English name', testIDs, 'en', [
 	'Bulbasaur',
 	'Bibarel',
