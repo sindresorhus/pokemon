@@ -66,6 +66,13 @@ pokemon.getId('Relaxo', 'de');
 //=> 143
 ```
 
+### .languages: *Set*
+
+```js
+pokemon.languages.has('ja');
+//=> true
+```
+
 
 ## Supported languages
 

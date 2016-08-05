@@ -8,16 +8,24 @@ const reportText = `Please report to ${repoUrl}/issues if we missed something.`;
 exports.all = pokemon;
 exports.random = uniqueRandomArray(pokemon);
 
+const languages = new Set([
+	'de',
+	'en',
+	'fr',
+	'ja',
+	'zh'
+]);
+
 function getLocalizedList(lang) {
 	if (!lang || lang === 'en') {
 		return pokemon;
 	}
 
-	try {
-		return require(`./pokemon_${lang}`);
-	} catch (err) {
+	if (!languages.has(lang)) {
 		throw new Error(`Localized list for language code '${lang}' does not exist. Pull request welcome: ${repoUrl}`);
 	}
+
+	return require(`./pokemon_${lang}`);
 }
 
 exports.getName = (id, lang) => {
@@ -41,3 +49,5 @@ exports.getId = (name, lang) => {
 
 	return index + 1;
 };
+
+exports.languages = languages;
