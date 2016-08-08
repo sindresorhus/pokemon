@@ -13,7 +13,7 @@ const languages = new Set([
 	'en',
 	'fr',
 	'ja',
-	'zh',
+	'zh-hans',
 	'ru'
 ]);
 
