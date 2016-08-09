@@ -82,7 +82,7 @@ Pokémon names are available for the following languages:
 - `en` (English)
 - `fr` (French)
 - `ja` (Japanese)
-- `zh` (Chinese)
+- `zh-Hans` (Simplified Chinese)
 - `ru` (Russian)
 
 
