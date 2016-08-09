@@ -52,7 +52,7 @@ test('Get German name by ID', testNames, 'de', [
 	'Volcanion'
 ]);
 
-test('Get Chinese name by ID', testNames, 'zh', [
+test('Get Chinese name by ID', testNames, 'zh-Hans', [
 	'妙蛙种子',
 	'大尾狸',
 	'ボルケニオン'
