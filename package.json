@@ -17,7 +17,7 @@
   },
   "files": [
     "index.js",
-    "pokemon*.json"
+    "data"
   ],
   "keywords": [
     "pokemon",
