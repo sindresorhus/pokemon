@@ -13,8 +13,9 @@ const languages = new Set([
 	'en',
 	'fr',
 	'ja',
+	'ru',
 	'zh-Hans',
-	'ru'
+	'zh-Hant'
 ]);
 
 function getLocalizedList(lang) {

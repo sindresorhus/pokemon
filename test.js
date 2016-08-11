@@ -52,10 +52,16 @@ test('Get German name by ID', testNames, 'de', [
 	'Volcanion'
 ]);
 
-test('Get Chinese name by ID', testNames, 'zh-Hans', [
+test('Get Simplified Chinese name by ID', testNames, 'zh-Hans', [
 	'妙蛙种子',
 	'大尾狸',
 	'ボルケニオン'
+]);
+
+test('Get Traditional Chinese name by ID', testNames, 'zh-Hant', [
+	'妙蛙種子',
+	'大尾狸',
+	'波爾凱尼恩'
 ]);
 
 test('Get Japanese name by ID', testNames, 'ja', [
