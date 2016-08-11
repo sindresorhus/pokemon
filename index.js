@@ -1,6 +1,6 @@
 'use strict';
 const uniqueRandomArray = require('unique-random-array');
-const pokemon = require('./pokemon');
+const pokemon = require('./data/en');
 
 const repoUrl = 'https://github.com/sindresorhus/pokemon';
 const reportText = `Please report to ${repoUrl}/issues if we missed something.`;
@@ -27,7 +27,7 @@ function getLocalizedList(lang) {
 		throw new Error(`Localized list for language code '${lang}' does not exist. Pull request welcome: ${repoUrl}`);
 	}
 
-	return require(`./pokemon_${lang}`);
+	return require(`./data/${lang.toLowerCase()}`);
 }
 
 exports.getName = (id, lang) => {
