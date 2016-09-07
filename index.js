@@ -19,15 +19,50 @@ const languages = new Set([
 ]);
 
 function getLocalizedList(lang) {
-	if (!lang || lang === 'en') {
-		return pokemon;
+	let defaultLang = lang;
+	if (!defaultLang) {
+		switch (global.navigator && (global.navigator.userLanguage || global.navigator.language || '').toLowerCase()) {
+			case 'de':
+			case 'de-ch':
+			case 'de-at':
+			case 'de-lu':
+			case 'de-li':
+				defaultLang = 'de';
+				break;
+			case 'fr':
+			case 'fr-be':
+			case 'fr-ca':
+			case 'fr-ch':
+			case 'fr-lu':
+				defaultLang = 'fr';
+				break;
+			case 'ja'
+				defaultLang = 'ja';
+				break;
+			case 'ru':
+			case 'ru-mi':
+			case 'ru-mo':
+				defaultLang = 'ru'
+				break;
+			case 'zh':
+			case 'zh-cn':
+				defaultLang = 'zh-Hans';
+				break;
+			case 'zh-tw':
+			case 'zh-hk':
+			case 'zh-sg':
+				defaultLang = 'zh-Hant';
+				break;
+			default:
+				defaultLang = 'en';
+		}
 	}
 
 	if (!languages.has(lang)) {
 		throw new Error(`Localized list for language code '${lang}' does not exist. Pull request welcome: ${repoUrl}`);
 	}
 
-	return require(`./data/${lang.toLowerCase()}`);
+	return require(`./data/${defaultLang.toLowerCase()}`);
 }
 
 exports.getName = (id, lang) => {
