@@ -5,7 +5,6 @@ const pokemon = require('./data/en');
 const repoUrl = 'https://github.com/sindresorhus/pokemon';
 const reportText = `Please report to ${repoUrl}/issues if we missed something.`;
 
-exports.all = pokemon;
 exports.random = uniqueRandomArray(pokemon);
 
 const languages = new Set([
@@ -29,6 +28,8 @@ function getLocalizedList(lang) {
 
 	return require(`./data/${lang.toLowerCase()}`);
 }
+
+exports.all = getLocalizedList;
 
 exports.getName = (id, lang) => {
 	const list = getLocalizedList(lang);

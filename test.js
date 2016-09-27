@@ -1,6 +1,10 @@
 import test from 'ava';
 import m from './';
 
+function testAll(t, lang, expectedNames) {
+	t.deepEqual(m.all(lang).slice(0, 3), expectedNames);
+}
+
 function testNames(t, lang, expectedNames) {
 	t.is(m.getName(1, lang), expectedNames[0]);
 	t.is(m.getName(400, lang), expectedNames[1]);
@@ -17,8 +21,6 @@ test('default', t => {
 	t.true(m.all.length > 0);
 	t.truthy(m.random());
 	t.not(m.random(), m.random());
-	t.is(m.all[0], 'Bulbasaur');
-	t.is(m.all[1], 'Ivysaur');
 	t.is(m.getName(143), 'Snorlax');
 	t.is(m.getId('Snorlax'), 143);
 });
@@ -27,6 +29,18 @@ test('.languages', t => {
 	t.true(m.languages.has('en'));
 	t.true(m.languages.has('de'));
 });
+
+test('Get all English names', testAll, 'en', [
+	'Bulbasaur',
+	'Ivysaur',
+	'Venusaur'
+]);
+
+test('Get all German names', testAll, 'de', [
+	'Bisasam',
+	'Bisaknosp',
+	'Bisaflor'
+]);
 
 test('Get English name by ID', testNames, 'en', [
 	'Bulbasaur',
