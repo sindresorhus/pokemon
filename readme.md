@@ -19,6 +19,9 @@ $ npm install --save pokemon
 ```js
 const pokemon = require('pokemon');
 
+pokemon.all();
+//=> ['Bulbasaur', ...]
+
 pokemon.random();
 //=> 'Snorlax'
 
@@ -32,9 +35,20 @@ pokemon.getId('Dratini');
 
 ## API
 
-### .all: *string[]*
+### .all(lang: *string* = 'en'): *string[]*
 
-All names.
+Get a list of all names.
+
+#### lang
+
+[Language code](#supported-languages) to retrieve the list of Pokémon for.
+
+```js
+pokemon.all();
+//=> ['Bulbasaur', ...]
+pokemon.all('de');
+//=> ['Bisasam', ...]
+```
 
 ### .random(): *string*
 
@@ -44,7 +58,9 @@ Random name.
 
 Get name from ID.
 
-With the optional `lang` parameter you can get a localized name using a [language code](https://en.wikipedia.org/wiki/ISO_639-1):
+#### lang
+
+[Language code](#supported-languages) to retrieve the Pokémon for.
 
 ```js
 pokemon.getName(100);
@@ -57,7 +73,9 @@ pokemon.getName(100, 'de');
 
 Get ID from name.
 
-With the optional `lang` parameter you can get the ID for a localized name using a [language code](https://en.wikipedia.org/wiki/ISO_639-1):
+#### lang
+
+[Language code](#supported-languages) of the localized name.
 
 ```js
 pokemon.getId('Snorlax');
@@ -85,6 +103,8 @@ Pokémon names are available for the following languages:
 - `ru` (Russian)
 - `zh-Hans` (Simplified Chinese)
 - `zh-Hant` (Traditional Chinese)
+
+The language codes follow the [IETF BCP 47 standard](https://en.wikipedia.org/wiki/IETF_language_tag).
 
 
 ## Related
