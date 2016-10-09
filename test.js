@@ -69,7 +69,7 @@ test('Get German name by ID', testNames, 'de', [
 test('Get Simplified Chinese name by ID', testNames, 'zh-Hans', [
 	'妙蛙种子',
 	'大尾狸',
-	'ボルケニオン'
+	'波尔凯尼恩'
 ]);
 
 test('Get Traditional Chinese name by ID', testNames, 'zh-Hant', [
