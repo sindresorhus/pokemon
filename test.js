@@ -49,7 +49,6 @@ test('Get all Korean names', testAll, 'ko', [
 	'이상해꽃'
 ]);
 
-
 test('Get English name by ID', testNames, 'en', [
 	'Bulbasaur',
 	'Bibarel',
