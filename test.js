@@ -28,6 +28,7 @@ test('default', t => {
 test('.languages', t => {
 	t.true(m.languages.has('en'));
 	t.true(m.languages.has('de'));
+	t.true(m.languages.has('ko'));
 });
 
 test('Get all English names', testAll, 'en', [
@@ -41,6 +42,13 @@ test('Get all German names', testAll, 'de', [
 	'Bisaknosp',
 	'Bisaflor'
 ]);
+
+test('Get all Korean names', testAll, 'ko', [
+	'이상해씨',
+	'이상해풀',
+	'이상해꽃'
+]);
+
 
 test('Get English name by ID', testNames, 'en', [
 	'Bulbasaur',
@@ -64,6 +72,12 @@ test('Get German name by ID', testNames, 'de', [
 	'Bisasam',
 	'Bidifas',
 	'Volcanion'
+]);
+
+test('Get Korean name by ID', testNames, 'ko', [
+	'이상해씨',
+	'비버통',
+	'볼케니온'
 ]);
 
 test('Get Simplified Chinese name by ID', testNames, 'zh-Hans', [
@@ -100,4 +114,10 @@ test('Get ID by German name', testIDs, 'de', [
 	'Bisasam',
 	'Bidifas',
 	'Volcanion'
+]);
+
+test('Get ID by Korean name', testIDs, 'ko', [
+	'이상해씨',
+	'비버통',
+	'볼케니온'
 ]);
