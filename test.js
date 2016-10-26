@@ -84,6 +84,12 @@ test('Get Japanese name by ID', testNames, 'ja', [
 	'ボルケニオン'
 ]);
 
+test('Get Korean name by ID', testNames, 'ko', [
+	'이상해씨',
+	'비버통',
+	'볼케니온'
+]);
+
 test('Get Russian name by ID', testNames, 'ru', [
 	'Бульбазавр',
 	'Бибарел',
