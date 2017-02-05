@@ -5,8 +5,6 @@ const pokemon = require('./data/en');
 const repoUrl = 'https://github.com/sindresorhus/pokemon';
 const reportText = `Please report to ${repoUrl}/issues if we missed something.`;
 
-exports.random = uniqueRandomArray(pokemon);
-
 const languages = new Set([
 	'de',
 	'en',
@@ -31,6 +29,12 @@ function getLocalizedList(lang) {
 }
 
 exports.all = getLocalizedList;
+
+exports.random = lang => {
+	const list = getLocalizedList(lang);
+
+	return uniqueRandomArray(list)();
+};
 
 exports.getName = (id, lang) => {
 	const list = getLocalizedList(lang);
