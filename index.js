@@ -16,6 +16,8 @@ const languages = new Set([
 	'zh-Hant'
 ]);
 
+const randomNameGenerators = new Map();
+
 function getLocalizedList(lang) {
 	if (!lang || lang === 'en') {
 		return pokemon;
@@ -31,9 +33,15 @@ function getLocalizedList(lang) {
 exports.all = getLocalizedList;
 
 exports.random = lang => {
-	const list = getLocalizedList(lang);
+	if (randomNameGenerators.has(lang)) {
+		return randomNameGenerators.get(lang)();
+	}
 
-	return uniqueRandomArray(list)();
+	const list = getLocalizedList(lang);
+	const random = uniqueRandomArray(list);
+	randomNameGenerators.set(lang, random);
+
+	return random();
 };
 
 exports.getName = (id, lang) => {
