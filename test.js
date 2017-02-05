@@ -18,7 +18,7 @@ function testIDs(t, lang, actualNames) {
 }
 
 function testRandom(t, lang, expectedName) {
-	t.true(m.all(lang).includes(expectedName));
+	t.true(m.all(lang).indexOf(expectedName) !== -1);
 }
 
 test('default', t => {
