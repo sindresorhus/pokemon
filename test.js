@@ -1,5 +1,5 @@
 import test from 'ava';
-import m from './';
+import m from '.';
 
 function testAll(t, lang, expectedNames) {
 	t.deepEqual(m.all(lang).slice(0, 3), expectedNames);
@@ -18,7 +18,7 @@ function testIDs(t, lang, actualNames) {
 }
 
 function testRandom(t, lang, expectedName) {
-	t.true(m.all(lang).indexOf(expectedName) !== -1);
+	t.not(m.all(lang).indexOf(expectedName), -1);
 }
 
 test('default', t => {
@@ -34,49 +34,49 @@ test('.languages', t => {
 	t.true(m.languages.has('de'));
 });
 
-test('Get all English names', testAll, 'en', [
+test('get all English names', testAll, 'en', [
 	'Bulbasaur',
 	'Ivysaur',
 	'Venusaur'
 ]);
 
-test('Get all German names', testAll, 'de', [
+test('get all German names', testAll, 'de', [
 	'Bisasam',
 	'Bisaknosp',
 	'Bisaflor'
 ]);
 
-test('Get English name by ID', testNames, 'en', [
+test('get English name by ID', testNames, 'en', [
 	'Bulbasaur',
 	'Bibarel',
 	'Volcanion'
 ]);
 
-test('Get English name by ID (when no language code is given)', testNames, undefined, [
+test('get English name by ID (when no language code is given)', testNames, undefined, [
 	'Bulbasaur',
 	'Bibarel',
 	'Volcanion'
 ]);
 
-test('Get French name by ID', testNames, 'fr', [
+test('get French name by ID', testNames, 'fr', [
 	'Bulbizarre',
 	'Castorno',
 	'Volcanion'
 ]);
 
-test('Get German name by ID', testNames, 'de', [
+test('get German name by ID', testNames, 'de', [
 	'Bisasam',
 	'Bidifas',
 	'Volcanion'
 ]);
 
-test('Get Simplified Chinese name by ID', testNames, 'zh-Hans', [
+test('get Simplified Chinese name by ID', testNames, 'zh-Hans', [
 	'妙蛙种子',
 	'大尾狸',
 	'波尔凯尼恩'
 ]);
 
-test('Get Traditional Chinese name by ID', testNames, 'zh-Hant', [
+test('get Traditional Chinese name by ID', testNames, 'zh-Hant', [
 	'妙蛙種子',
 	'大尾狸',
 	'波爾凱尼恩'
@@ -88,32 +88,30 @@ test('Get Japanese name by ID', testNames, 'ja', [
 	'ボルケニオン'
 ]);
 
-test('Get Korean name by ID', testNames, 'ko', [
+test('get Korean name by ID', testNames, 'ko', [
 	'이상해씨',
 	'비버통',
 	'볼케니온'
 ]);
 
-test('Get Russian name by ID', testNames, 'ru', [
+test('get Russian name by ID', testNames, 'ru', [
 	'Бульбазавр',
 	'Бибарел',
 	'Вулканион'
 ]);
 
-test('Get ID by English name', testIDs, 'en', [
+test('get ID by English name', testIDs, 'en', [
 	'Bulbasaur',
 	'Bibarel',
 	'Volcanion'
 ]);
 
-test('Get ID by German name', testIDs, 'de', [
+test('get ID by German name', testIDs, 'de', [
 	'Bisasam',
 	'Bidifas',
 	'Volcanion'
 ]);
 
-test('Get English random pokemon name (when no language code is given)', testRandom, undefined, m.random());
-
-test('Get English random pokemon name', testRandom, 'en', m.random('en'));
-
-test('Get German random pokemon name', testRandom, 'de', m.random('de'));
+test('get English random name (when no language code is given)', testRandom, undefined, m.random());
+test('get English random name', testRandom, 'en', m.random('en'));
+test('get German random name', testRandom, 'de', m.random('de'));
