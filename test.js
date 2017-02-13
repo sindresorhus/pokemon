@@ -17,6 +17,10 @@ function testIDs(t, lang, actualNames) {
 	t.is(m.getId(actualNames[2], lang), 721);
 }
 
+function testRandom(t, lang, expectedName) {
+	t.true(m.all(lang).indexOf(expectedName) !== -1);
+}
+
 test('default', t => {
 	t.true(m.all.length > 0);
 	t.truthy(m.random());
@@ -107,3 +111,9 @@ test('Get ID by German name', testIDs, 'de', [
 	'Bidifas',
 	'Volcanion'
 ]);
+
+test('Get English random pokemon name (when no language code is given)', testRandom, undefined, m.random());
+
+test('Get English random pokemon name', testRandom, 'en', m.random('en'));
+
+test('Get German random pokemon name', testRandom, 'de', m.random('de'));

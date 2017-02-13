@@ -50,7 +50,7 @@ pokemon.all('de');
 //=> ['Bisasam', ...]
 ```
 
-### .random(): *string*
+### .random(lang: *string* = 'en'): *string*
 
 Random name.
 
