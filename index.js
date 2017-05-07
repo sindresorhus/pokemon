@@ -27,7 +27,7 @@ function getLocalizedList(lang) {
 		throw new Error(`Localized list for language code '${lang}' does not exist. Pull request welcome: ${repoUrl}`);
 	}
 
-	return require(`./data/${lang.toLowerCase()}`);	// eslint-disable-line import/no-dynamic-require
+	return require(`./data/${lang.toLowerCase()}`);
 }
 
 exports.all = getLocalizedList;
