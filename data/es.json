@@ -1,15 +1,3 @@
-/*
-	Retrieved on https://es.wikipedia.org/wiki/Anexo:Pokémon using :
-
-	pokemon_names = [];
-	trs = document.getElementsByTagName("table")[0].children[1].children;
-	for (var i in trs) {
-		if (trs[i].children) {
-			pokemon_names.push(trs[i].children[1].children[0].text);
-		}
-	}
-	console.log(JSON.stringify(pokemon_names)) 
-*/
 [
 	"Bulbasaur",
 	"Ivysaur",
@@ -702,7 +690,7 @@
 	"Barbaracle",
 	"Skrelp",
 	"Dragalge",
-	"clauncher",
+	"Clauncher",
 	"Clawitzer",
 	"Helioptile",
 	"Heliolisk",
