@@ -98,6 +98,7 @@ Pokémon names are available for the following languages:
 
 - `de` (German)
 - `en` (English)
+- `es` (Spanish)
 - `fr` (French)
 - `ja` (Japanese)
 - `ko` (Korean)
