@@ -8,6 +8,7 @@ const reportText = `Please report to ${repoUrl}/issues if we missed something.`;
 const languages = new Set([
 	'de',
 	'en',
+	'es',
 	'fr',
 	'ja',
 	'ko',
