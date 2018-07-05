@@ -18,8 +18,8 @@ const languages = new Set([
 
 const randomNameGenerators = new Map();
 
-function getLocalizedList(lang) {
-	if (!lang || lang === 'en') {
+function getLocalizedList(lang = 'en') {
+	if (lang === 'en') {
 		return pokemon;
 	}
 
@@ -32,7 +32,7 @@ function getLocalizedList(lang) {
 
 exports.all = getLocalizedList;
 
-exports.random = lang => {
+exports.random = (lang = 'en') => {
 	if (randomNameGenerators.has(lang)) {
 		return randomNameGenerators.get(lang)();
 	}
@@ -44,7 +44,7 @@ exports.random = lang => {
 	return random();
 };
 
-exports.getName = (id, lang) => {
+exports.getName = (id, lang = 'en') => {
 	const list = getLocalizedList(lang);
 	const name = list[id - 1];
 
@@ -55,7 +55,7 @@ exports.getName = (id, lang) => {
 	return name;
 };
 
-exports.getId = (name, lang) => {
+exports.getId = (name, lang = 'en') => {
 	const list = getLocalizedList(lang);
 	const index = list.indexOf(name);
 

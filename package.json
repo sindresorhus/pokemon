@@ -1,45 +1,42 @@
 {
-  "name": "pokemon",
-  "version": "1.2.3",
-  "description": "Get Pokémon names",
-  "license": "MIT",
-  "repository": "sindresorhus/pokemon",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js",
-    "data"
-  ],
-  "keywords": [
-    "pokemon",
-    "names",
-    "creatures",
-    "words",
-    "list",
-    "array",
-    "random",
-    "mock",
-    "placeholder",
-    "fixture",
-    "data"
-  ],
-  "dependencies": {
-    "unique-random-array": "^1.0.0"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  },
-  "xo": {
-    "esnext": true
-  }
+	"name": "pokemon",
+	"version": "1.2.3",
+	"description": "Get Pokémon names",
+	"license": "MIT",
+	"repository": "sindresorhus/pokemon",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=6"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js",
+		"data"
+	],
+	"keywords": [
+		"pokemon",
+		"names",
+		"creatures",
+		"words",
+		"list",
+		"array",
+		"random",
+		"mock",
+		"placeholder",
+		"fixture",
+		"data"
+	],
+	"dependencies": {
+		"unique-random-array": "^1.0.0"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"xo": "*"
+	}
 }
