@@ -10,13 +10,14 @@
 		"url": "sindresorhus.com"
 	},
 	"engines": {
-		"node": ">=6"
+		"node": ">=8"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "xo && ava && tsd"
 	},
 	"files": [
 		"index.js",
+		"index.d.ts",
 		"data"
 	],
 	"keywords": [
@@ -33,10 +34,16 @@
 		"data"
 	],
 	"dependencies": {
-		"unique-random-array": "^1.0.0"
+		"unique-random-array": "^2.0.0"
 	},
 	"devDependencies": {
-		"ava": "*",
-		"xo": "*"
+		"ava": "^1.4.1",
+		"tsd": "^0.7.2",
+		"xo": "^0.24.0"
+	},
+	"tsd": {
+		"compilerOptions": {
+			"resolveJsonModule": true
+		}
 	}
 }
