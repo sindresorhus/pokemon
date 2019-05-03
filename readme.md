@@ -20,7 +20,7 @@ $ npm install pokemon
 const pokemon = require('pokemon');
 
 pokemon.all();
-//=> ['Bulbasaur', ...]
+//=> ['Bulbasaur', …]
 
 pokemon.random();
 //=> 'Snorlax'
@@ -35,30 +35,56 @@ pokemon.getId('Dratini');
 
 ## API
 
-### .all(lang: *string* = 'en'): *string[]*
+### .all([language])
 
-Get a list of all names.
+Get all Pokémon names as a `string[]`.
 
-#### lang
+#### language
+
+Type: `string`<br>
+Default: `'en'`
 
 [Language code](#supported-languages) to retrieve the list of Pokémon for.
 
 ```js
 pokemon.all();
-//=> ['Bulbasaur', ...]
+//=> ['Bulbasaur', …]
 pokemon.all('de');
-//=> ['Bisasam', ...]
+//=> ['Bisasam', …]
 ```
 
-### .random(lang: *string* = 'en'): *string*
+### .random([language])
 
-Random name.
+Get random Pokémon name.
 
-### .getName(id: *number*, lang: *string* = 'en'): *string*
+#### language
 
-Get name from ID.
+Type: `string`<br>
+Default: `'en'`
 
-#### lang
+[Language code](#supported-languages) to retrieve the Pokémon for.
+
+```js
+pokemon.random();
+//=> 'Vigoroth'
+pokemon.random('de');
+//=> 'Muntier'
+```
+
+### .getName(id, [language])
+
+Get Pokémon name from ID.
+
+#### id
+
+Type: `number`
+
+The ID of a Pokémon, retrieved via `getId()`.
+
+#### language
+
+Type: `string`<br>
+Default: `'en'`
 
 [Language code](#supported-languages) to retrieve the Pokémon for.
 
@@ -69,11 +95,20 @@ pokemon.getName(100, 'de');
 //=> 'Voltobal'
 ```
 
-### .getId(name: *string*, lang: *string* = 'en'): *number*
+### .getId(name, [language])
 
-Get ID from name.
+Get Pokémon ID from name.
 
-#### lang
+#### name
+
+Type: `string`
+
+The Pokémon name in the `language` locale.
+
+#### language
+
+Type: `string`<br>
+Default: `'en'`
 
 [Language code](#supported-languages) of the localized name.
 

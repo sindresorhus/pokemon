@@ -1,37 +1,37 @@
 import test from 'ava';
-import m from '.';
+import pokemon from '.';
 
-function testAll(t, lang, expectedNames) {
-	t.deepEqual(m.all(lang).slice(0, 3), expectedNames);
+function testAll(t, language, expectedNames) {
+	t.deepEqual(pokemon.all(language).slice(0, 3), expectedNames);
 }
 
-function testNames(t, lang, expectedNames) {
-	t.is(m.getName(1, lang), expectedNames[0]);
-	t.is(m.getName(400, lang), expectedNames[1]);
-	t.is(m.getName(721, lang), expectedNames[2]);
+function testNames(t, language, expectedNames) {
+	t.is(pokemon.getName(1, language), expectedNames[0]);
+	t.is(pokemon.getName(400, language), expectedNames[1]);
+	t.is(pokemon.getName(721, language), expectedNames[2]);
 }
 
-function testIDs(t, lang, actualNames) {
-	t.is(m.getId(actualNames[0], lang), 1);
-	t.is(m.getId(actualNames[1], lang), 400);
-	t.is(m.getId(actualNames[2], lang), 721);
+function testIDs(t, language, actualNames) {
+	t.is(pokemon.getId(actualNames[0], language), 1);
+	t.is(pokemon.getId(actualNames[1], language), 400);
+	t.is(pokemon.getId(actualNames[2], language), 721);
 }
 
-function testRandom(t, lang, expectedName) {
-	t.not(m.all(lang).indexOf(expectedName), -1);
+function testRandom(t, language, expectedName) {
+	t.not(pokemon.all(language).indexOf(expectedName), -1);
 }
 
 test('default', t => {
-	t.true(m.all().length > 0);
-	t.truthy(m.random());
-	t.not(m.random(), m.random());
-	t.is(m.getName(143), 'Snorlax');
-	t.is(m.getId('Snorlax'), 143);
+	t.true(pokemon.all().length > 0);
+	t.truthy(pokemon.random());
+	t.not(pokemon.random(), pokemon.random());
+	t.is(pokemon.getName(143), 'Snorlax');
+	t.is(pokemon.getId('Snorlax'), 143);
 });
 
 test('.languages', t => {
-	t.true(m.languages.has('en'));
-	t.true(m.languages.has('de'));
+	t.true(pokemon.languages.has('en'));
+	t.true(pokemon.languages.has('de'));
 });
 
 test('get all English names', testAll, 'en', [
@@ -112,6 +112,6 @@ test('get ID by German name', testIDs, 'de', [
 	'Volcanion'
 ]);
 
-test('get English random name (when no language code is given)', testRandom, undefined, m.random());
-test('get English random name', testRandom, 'en', m.random('en'));
-test('get German random name', testRandom, 'de', m.random('de'));
+test('get English random name (when no language code is given)', testRandom, undefined, pokemon.random());
+test('get English random name', testRandom, 'en', pokemon.random('en'));
+test('get German random name', testRandom, 'de', pokemon.random('de'));

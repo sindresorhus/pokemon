@@ -2,8 +2,8 @@
 const uniqueRandomArray = require('unique-random-array');
 const pokemon = require('./data/en');
 
-const repoUrl = 'https://github.com/sindresorhus/pokemon';
-const reportText = `Please report to ${repoUrl}/issues if we missed something.`;
+const repositoryUrl = 'https://github.com/sindresorhus/pokemon';
+const reportText = `Please report to ${repositoryUrl}/issues if we missed something.`;
 
 const languages = new Set([
 	'de',
@@ -18,34 +18,34 @@ const languages = new Set([
 
 const randomNameGenerators = new Map();
 
-function getLocalizedList(lang = 'en') {
-	if (lang === 'en') {
+function getLocalizedList(language = 'en') {
+	if (language === 'en') {
 		return pokemon;
 	}
 
-	if (!languages.has(lang)) {
-		throw new Error(`Localized list for language code '${lang}' does not exist. Pull request welcome: ${repoUrl}`);
+	if (!languages.has(language)) {
+		throw new Error(`Localized list for language code '${language}' does not exist. Pull request welcome: ${repositoryUrl}`);
 	}
 
-	return require(`./data/${lang.toLowerCase()}`);
+	return require(`./data/${language.toLowerCase()}`);
 }
 
 exports.all = getLocalizedList;
 
-exports.random = (lang = 'en') => {
-	if (randomNameGenerators.has(lang)) {
-		return randomNameGenerators.get(lang)();
+exports.random = (language = 'en') => {
+	if (randomNameGenerators.has(language)) {
+		return randomNameGenerators.get(language)();
 	}
 
-	const list = getLocalizedList(lang);
+	const list = getLocalizedList(language);
 	const random = uniqueRandomArray(list);
-	randomNameGenerators.set(lang, random);
+	randomNameGenerators.set(language, random);
 
 	return random();
 };
 
-exports.getName = (id, lang = 'en') => {
-	const list = getLocalizedList(lang);
+exports.getName = (id, language = 'en') => {
+	const list = getLocalizedList(language);
 	const name = list[id - 1];
 
 	if (!name) {
@@ -55,12 +55,12 @@ exports.getName = (id, lang = 'en') => {
 	return name;
 };
 
-exports.getId = (name, lang = 'en') => {
-	const list = getLocalizedList(lang);
+exports.getId = (name, language = 'en') => {
+	const list = getLocalizedList(language);
 	const index = list.indexOf(name);
 
 	if (index === -1) {
-		throw new Error(`Pokémon with name '${name}' does not exist for language code '${lang}'. ${reportText}`);
+		throw new Error(`Pokémon with name '${name}' does not exist for language code '${language}'. ${reportText}`);
 	}
 
 	return index + 1;
