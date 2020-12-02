@@ -1,4 +1,4 @@
-# pokemon [![Build Status](https://travis-ci.org/sindresorhus/pokemon.svg?branch=master)](https://travis-ci.org/sindresorhus/pokemon)
+# pokemon
 
 > Get [Pokémon](https://en.wikipedia.org/wiki/Pok%C3%A9mon) names
 
@@ -6,13 +6,11 @@ The name list is just a [JSON file](data/en.json) and can be used wherever.
 
 ![](header.jpg)
 
-
 ## Install
 
 ```
 $ npm install pokemon
 ```
-
 
 ## Usage
 
@@ -32,16 +30,15 @@ pokemon.getId('Dratini');
 //=> 147
 ```
 
-
 ## API
 
-### .all([language])
+### .all(language?)
 
 Get all Pokémon names as a `string[]`.
 
 #### language
 
-Type: `string`<br>
+Type: `string`\
 Default: `'en'`
 
 [Language code](#supported-languages) to retrieve the list of Pokémon for.
@@ -53,13 +50,13 @@ pokemon.all('de');
 //=> ['Bisasam', …]
 ```
 
-### .random([language])
+### .random(language?)
 
 Get random Pokémon name.
 
 #### language
 
-Type: `string`<br>
+Type: `string`\
 Default: `'en'`
 
 [Language code](#supported-languages) to retrieve the Pokémon for.
@@ -71,7 +68,7 @@ pokemon.random('de');
 //=> 'Muntier'
 ```
 
-### .getName(id, [language])
+### .getName(id, language?)
 
 Get Pokémon name from ID.
 
@@ -83,7 +80,7 @@ The ID of a Pokémon, retrieved via `getId()`.
 
 #### language
 
-Type: `string`<br>
+Type: `string`\
 Default: `'en'`
 
 [Language code](#supported-languages) to retrieve the Pokémon for.
@@ -95,7 +92,7 @@ pokemon.getName(100, 'de');
 //=> 'Voltobal'
 ```
 
-### .getId(name, [language])
+### .getId(name, language?)
 
 Get Pokémon ID from name.
 
@@ -107,7 +104,7 @@ The Pokémon name in the `language` locale.
 
 #### language
 
-Type: `string`<br>
+Type: `string`\
 Default: `'en'`
 
 [Language code](#supported-languages) of the localized name.
@@ -126,7 +123,6 @@ pokemon.languages.has('ja');
 //=> true
 ```
 
-
 ## Supported languages
 
 Pokémon names are available for the following languages:
@@ -142,7 +138,6 @@ Pokémon names are available for the following languages:
 
 The language codes follow the [IETF BCP 47 standard](https://en.wikipedia.org/wiki/IETF_language_tag).
 
-
 ## Related
 
 - [pokemon-cli](https://github.com/sindresorhus/pokemon-cli) - CLI for this module
@@ -152,8 +147,3 @@ The language codes follow the [IETF BCP 47 standard](https://en.wikipedia.org/wi
 - [superheroes](https://github.com/sindresorhus/superheroes) - Get superhero names
 - [supervillains](https://github.com/sindresorhus/supervillains) - Get supervillain names
 - [yes-no-words](https://github.com/sindresorhus/yes-no-words) - Get yes/no like words
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
