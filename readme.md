@@ -1,3 +1,5 @@
+*[Español](readme-esp.md) ∙
+
 # pokemon
 
 > Get [Pokémon](https://en.wikipedia.org/wiki/Pok%C3%A9mon) names
