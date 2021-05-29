@@ -10,6 +10,7 @@ expectType<string>(pokemon.random());
 expectType<string>(pokemon.random('de'));
 expectType<string>(pokemon.getName(100));
 expectType<string>(pokemon.getName(100, 'de'));
+expectType<string>(pokemon.getName(772, 'es'))
 expectType<number>(pokemon.getId('Snorlax'));
 expectType<number>(pokemon.getId('Relaxo', 'de'));
 expectType<ReadonlySet<string>>(pokemon.languages);
