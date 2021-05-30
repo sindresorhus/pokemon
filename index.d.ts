@@ -3,6 +3,7 @@ declare namespace pokemon {
 		| 'de'
 		| 'en'
 		| 'fr'
+		| 'es'
 		| 'ja'
 		| 'ko'
 		| 'ru'

@@ -32,6 +32,7 @@ test('default', t => {
 test('.languages', t => {
 	t.true(pokemon.languages.has('en'));
 	t.true(pokemon.languages.has('de'));
+	t.true(pokemon.languages.has('es'));
 });
 
 test('get all English names', testAll, 'en', [

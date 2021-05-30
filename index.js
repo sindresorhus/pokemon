@@ -9,6 +9,7 @@ const languages = new Set([
 	'de',
 	'en',
 	'fr',
+	'es',
 	'ja',
 	'ko',
 	'ru',
