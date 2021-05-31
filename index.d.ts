@@ -7,6 +7,7 @@ declare namespace pokemon {
 		| 'ja'
 		| 'ko'
 		| 'ru'
+		| 'th'
 		| 'zh-Hans'
 		| 'zh-Hant';
 }
