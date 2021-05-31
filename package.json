@@ -1,9 +1,10 @@
 {
 	"name": "pokemon",
-	"version": "2.0.2",
+	"version": "2.1.0",
 	"description": "Get Pokémon names",
 	"license": "MIT",
 	"repository": "sindresorhus/pokemon",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
@@ -44,6 +45,11 @@
 	"tsd": {
 		"compilerOptions": {
 			"resolveJsonModule": true
+		}
+	},
+	"xo": {
+		"rules": {
+			"import/extensions": "off"
 		}
 	}
 }
