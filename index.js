@@ -32,6 +32,13 @@ function getLocalizedList(language = 'en') {
 	return require(`./data/${language.toLowerCase()}.json`);
 }
 
+//https://stackoverflow.com/a/4878800
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
+}
+
 exports.all = getLocalizedList;
 
 exports.random = (language = 'en') => {
@@ -59,6 +66,7 @@ exports.getName = (id, language = 'en') => {
 
 exports.getId = (name, language = 'en') => {
 	const list = getLocalizedList(language);
+        name = toTitleCase(name);
 	const index = list.indexOf(name);
 
 	if (index === -1) {
