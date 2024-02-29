@@ -15,7 +15,7 @@ const languages = new Set([
 	'ru',
 	'th',
 	'zh-Hans',
-	'zh-Hant'
+	'zh-Hant',
 ]);
 
 const randomNameGenerators = new Map();

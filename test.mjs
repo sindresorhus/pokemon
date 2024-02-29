@@ -1,5 +1,5 @@
 import test from 'ava';
-import pokemon from '.';
+import pokemon from './index.js';
 
 function testAll(t, language, expectedNames) {
 	t.deepEqual(pokemon.all(language).slice(0, 3), expectedNames);
@@ -39,79 +39,79 @@ test('.languages', t => {
 test('get all English names', testAll, 'en', [
 	'Bulbasaur',
 	'Ivysaur',
-	'Venusaur'
+	'Venusaur',
 ]);
 
 test('get all German names', testAll, 'de', [
 	'Bisasam',
 	'Bisaknosp',
-	'Bisaflor'
+	'Bisaflor',
 ]);
 
 test('get English name by ID', testNames, 'en', [
 	'Bulbasaur',
 	'Bibarel',
-	'Volcanion'
+	'Volcanion',
 ]);
 
 test('get English name by ID (when no language code is given)', testNames, undefined, [
 	'Bulbasaur',
 	'Bibarel',
-	'Volcanion'
+	'Volcanion',
 ]);
 
 test('get French name by ID', testNames, 'fr', [
 	'Bulbizarre',
 	'Castorno',
-	'Volcanion'
+	'Volcanion',
 ]);
 
 test('get German name by ID', testNames, 'de', [
 	'Bisasam',
 	'Bidifas',
-	'Volcanion'
+	'Volcanion',
 ]);
 
 test('get Simplified Chinese name by ID', testNames, 'zh-Hans', [
 	'妙蛙种子',
 	'大尾狸',
-	'波尔凯尼恩'
+	'波尔凯尼恩',
 ]);
 
 test('get Traditional Chinese name by ID', testNames, 'zh-Hant', [
 	'妙蛙種子',
 	'大尾狸',
-	'波爾凱尼恩'
+	'波爾凱尼恩',
 ]);
 
 test('Get Japanese name by ID', testNames, 'ja', [
 	'フシギダネ',
 	'ビーダル',
-	'ボルケニオン'
+	'ボルケニオン',
 ]);
 
 test('get Korean name by ID', testNames, 'ko', [
 	'이상해씨',
 	'비버통',
-	'볼케니온'
+	'볼케니온',
 ]);
 
 test('get Russian name by ID', testNames, 'ru', [
 	'Бульбазавр',
 	'Бибарел',
-	'Вулканион'
+	'Вулканион',
 ]);
 
 test('get ID by English name', testIDs, 'en', [
 	'Bulbasaur',
 	'Bibarel',
-	'Volcanion'
+	'Volcanion',
 ]);
 
 test('get ID by German name', testIDs, 'de', [
 	'Bisasam',
 	'Bidifas',
-	'Volcanion'
+	'Volcanion',
 ]);
 
 test('get English random name (when no language code is given)', testRandom, undefined, pokemon.random());

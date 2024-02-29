@@ -10,8 +10,9 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
+	"sideEffects": false,
 	"engines": {
-		"node": ">=8"
+		"node": ">=18"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -38,9 +39,9 @@
 		"unique-random-array": "^2.0.0"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
-		"tsd": "^0.7.2",
-		"xo": "^0.24.0"
+		"ava": "^6.1.2",
+		"tsd": "^0.30.7",
+		"xo": "^0.57.0"
 	},
 	"tsd": {
 		"compilerOptions": {
@@ -49,7 +50,11 @@
 	},
 	"xo": {
 		"rules": {
-			"import/extensions": "off"
+			"import/extensions": "off",
+			"@typescript-eslint/no-require-imports": "off",
+			"unicorn/prefer-module": "off",
+			"@typescript-eslint/member-ordering": "off",
+			"@typescript-eslint/no-redeclare": "off"
 		}
 	}
 }

@@ -8,8 +8,8 @@ The name list is just a [JSON file](data/en.json) and can be used wherever.
 
 ## Install
 
-```
-$ npm install pokemon
+```sh
+npm install pokemon
 ```
 
 ## Usage
