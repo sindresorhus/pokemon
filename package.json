@@ -1,6 +1,6 @@
 {
 	"name": "pokemon",
-	"version": "2.3.6",
+	"version": "3.0.0",
 	"description": "Get Pokémon names",
 	"license": "MIT",
 	"repository": "sindresorhus/pokemon",
