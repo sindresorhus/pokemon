@@ -140,6 +140,7 @@ Pokémon names are available for the following languages:
 
 The language codes follow the [IETF BCP 47 standard](https://en.wikipedia.org/wiki/IETF_language_tag).
 
+
 ## Related
 
 - [pokemon-cli](https://github.com/sindresorhus/pokemon-cli) - CLI for this module
@@ -149,3 +150,11 @@ The language codes follow the [IETF BCP 47 standard](https://en.wikipedia.org/wi
 - [superheroes](https://github.com/sindresorhus/superheroes) - Get superhero names
 - [supervillains](https://github.com/sindresorhus/supervillains) - Get supervillain names
 - [yes-no-words](https://github.com/sindresorhus/yes-no-words) - Get yes/no like words
+
+## Known Issues
+
+
+- `ru`(Russian)
+    - Does not include Pokemon 1009-1025 (Future Paradox Pokemon, and Pokemon released in Gen 9 Expansions - The Teal Mask, and The Indigo Disk). Cannot find credible source for translation.
+- `th` (Thai)
+    - Does not include Pokemon Pokemon 1011-1025 (Pokemon released in Gen 9 Expansions - The Teal Mask, and The Indigo Disk). Cannot find credible source for translation.
