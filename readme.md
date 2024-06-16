@@ -154,5 +154,3 @@ The language codes follow the [IETF BCP 47 standard](https://en.wikipedia.org/wi
 
 - `ru` (Russian)
 	- Does not include Pokemon 1009-1025 (Future Paradox Pokemon, and Pokemon released in Gen 9 Expansions - The Teal Mask, and The Indigo Disk). Cannot find credible source for translation.
-- `th` (Thai)
-	- Does not include Pokemon 1011-1025 (Pokemon released in Gen 9 Expansions - The Teal Mask, and The Indigo Disk). Cannot find credible source for translation.
